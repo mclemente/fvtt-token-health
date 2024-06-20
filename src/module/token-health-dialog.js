@@ -4,13 +4,6 @@ const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
  * Extend Dialog class to force focus on the input
  */
 export class TokenHealthDialog extends HandlebarsApplicationMixin(ApplicationV2) {
-	constructor(options) {
-		super(options);
-		if (game.settings.get("token-health", "enableLeftHandMode")) {
-			this.options.classes.push("token-health-left-handed-mode");
-		}
-	}
-
 	static DEFAULT_OPTIONS = {
 		actions: {
 			damage: TokenHealthDialog.damage,
@@ -70,6 +63,9 @@ export class TokenHealthDialog extends HandlebarsApplicationMixin(ApplicationV2)
 				// condition: true,
 			},
 		];
+		if (game.settings.get("token-health", "enableLeftHandMode")) {
+			buttons.reverse();
+		}
 
 		let thumbnails = {};
 		if (game.settings.get("token-health", "enableTokenImages")) {

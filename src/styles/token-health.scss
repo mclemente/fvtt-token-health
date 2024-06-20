@@ -6,19 +6,6 @@ $types: (
 );
 
 .form-token-health {
-	&.token-health-left-handed-mode {
-		.dialog-buttons {
-			flex-direction: row-reverse;
-
-			button:first-child {
-				margin-right: 0px;
-			}
-			button:last-child {
-				margin-right: 5px;
-			}
-		}
-	}
-
 	.token-images {
 		flex-direction: row;
 		min-height: 110px;
