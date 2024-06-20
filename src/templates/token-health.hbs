@@ -1,0 +1,18 @@
+<form class="form-token-health" id="token-health" autocomplete="off" onsubmit="event.preventDefault();">
+    <div class="form-group" style="height: 30px">
+        <div class="flexrow">
+            <b><large><label style="margin: 5px" for="token-health-input">{{localize "TOKEN_HEALTH.Amount"}}</label></large></b>
+            {{#each damageSubtypes}}
+            <input type="number" data-dtype="Number" name="damageSubtype" data-type="{{@index}}" min="-999" max="999" placeholder="{{this}}"/>
+            {{/each}}
+            {{#if damageTypes}}
+                <label style="margin-left: 25px" for="token-health-checkbox">{{localize "TOKEN_HEALTH.damageTypeLabel"}}</label>
+                <select id="token-health-damageType" name="damageType">
+                    {{#each damageTypes as |t idx|}}
+                        <option value="{{t}}">{{t}}</option>
+                    {{/each}}
+                </select>
+            {{/if}}
+        </div>
+    </div>
+</form>

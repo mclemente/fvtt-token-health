@@ -1,0 +1,49 @@
+{
+	"id": "token-health",
+	"title": "Token Health",
+	"description": "Apply damage or healing more easily",
+	"authors": [
+		{
+			"name": "Matheus Clemente",
+			"discord": "mclemente"
+		}
+	],
+	"scripts": [],
+	"esmodules": ["module/token-health.js"],
+	"styles": ["styles/token-health.css"],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		},
+		{
+			"lang": "fr",
+			"name": "Français",
+			"path": "lang/fr.json"
+		},
+		{
+			"lang": "es",
+			"name": "Español",
+			"path": "lang/es.json"
+		},
+		{
+			"lang": "de",
+			"name": "Deutsch",
+			"path": "lang/de.json"
+		},
+		{
+			"lang": "ja",
+			"name": "日本語",
+			"path": "lang/ja.json"
+		}
+	],
+	"compatibility": {
+		"minimum": "12",
+		"verified": "12"
+	},
+	"url": "This is auto replaced",
+	"version": "This is auto replaced",
+	"manifest": "This is auto replaced",
+	"download": "This is auto replaced"
+}
