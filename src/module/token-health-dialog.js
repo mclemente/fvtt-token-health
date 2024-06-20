@@ -973,6 +973,7 @@ export class TokenHealthDialog extends HandlebarsApplicationMixin(ApplicationV2)
 			if (enableChat) ChatMessage.create({ speaker: this_speaker, content: flavor3 }); // Good by cruel world!
 		}
 	}
+
 	/**
 	 * Get the new HP value
 	 * @param {number} currentHP - Current HP value
@@ -983,7 +984,6 @@ export class TokenHealthDialog extends HandlebarsApplicationMixin(ApplicationV2)
 	 * @param {boolean} [options.allowNegative] - Can the return HP value be negative?
 	 * @returns {[number, number]} - HP value and Temp HP value
 	 */
-
 	getNewHP(currentHP, maxHP, tempHP, value, options = {}) {
 		if (tempHP === undefined) {
 			// Get new HP value after applying damage
