@@ -5,7 +5,7 @@ Hooks.once("i18nInit", async function () {
 	registerSettings();
 	game.keybindings.register("token-health", "damageSelectedTokens", {
 		// name: "Damage Selected Tokens", // TOKEN_HEALTH.toggleKeyName
-		hint: "Display a dialog to adjust selected tokens attributes", // TOKEN_HEALTH.toggleKeyHint
+		hint: "TOKEN_HEALTH.toggleKeyHint",
 		name: "TOKEN_HEALTH.toggleKeyName",
 		editable: [
 			{
