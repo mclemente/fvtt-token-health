@@ -62,7 +62,7 @@ export class TokenHealthDialog extends HandlebarsApplicationMixin(ApplicationV2)
 				// condition: true,
 			},
 			{
-				type: "button",
+				type: "submit",
 				cssClass: ["damage"],
 				icon: "fas fa-minus-circle",
 				label: game.i18n.localize("TOKEN_HEALTH.Damage"),

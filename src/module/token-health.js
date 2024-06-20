@@ -19,6 +19,7 @@ Hooks.once("i18nInit", async function () {
 			const allTokens = isTarget ? Array.from(game.user.targets) : canvas.tokens.controlled;
 			const tokens = allTokens.filter((t) => t.isOwner);
 			if (tokens.some((t) => t.hasActiveHUD)) return;
+			context.event.preventDefault();
 
 			// If there are no owned tokens then no need to launch the dialog
 			if (!tokens.length) return ui.notifications.info(game.i18n.localize("TOKEN_HEALTH.accessMsg"));
