@@ -86,35 +86,35 @@ jobs:
                   name: dist
                   path: dist
 
-    # publish:
-    #     needs:
-    #         - lint
-    #         - build
-    #     runs-on: ubuntu-latest
-    #     steps:
-    #         - name: Checkout code
-    #           uses: actions/checkout@v4
+    publish:
+        needs:
+            - lint
+            - build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
 
-    #         - name: Download production artifacts for publication
-    #           uses: actions/download-artifact@v3
-    #           with:
-    #               name: dist
-    #               path: dist
+            - name: Download production artifacts for publication
+              uses: actions/download-artifact@v3
+              with:
+                  name: dist
+                  path: dist
 
-    #         - name: Create zip file
-    #           working-directory: ./dist
-    #           run: zip -r ../${{ env.package_type }}.zip .
+            - name: Create zip file
+              working-directory: ./dist
+              run: zip -r ../${{ env.package_type }}.zip .
 
-    #         - name: Create release
-    #           id: create_version_release
-    #           uses: ncipollo/release-action@v1
-    #           with:
-    #               allowUpdates: true
-    #               name: ${{ github.event.release.name }}
-    #               token: ${{ secrets.GITHUB_TOKEN }}
-    #               artifacts: "./dist/${{ env.package_type }}.json, ./${{ env.package_type }}.zip"
-    #               tag: ${{ github.event.release.tag_name }}
-    #               body: ${{ github.event.release.body }}
+            - name: Create release
+              id: create_version_release
+              uses: ncipollo/release-action@v1
+              with:
+                  allowUpdates: true
+                  name: ${{ github.event.release.name }}
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  artifacts: "./dist/${{ env.package_type }}.json, ./${{ env.package_type }}.zip"
+                  tag: ${{ github.event.release.tag_name }}
+                  body: ${{ github.event.release.body }}
 
     #         - name: Get Module ID
     #           id: moduleID
