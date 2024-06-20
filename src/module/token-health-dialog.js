@@ -386,7 +386,7 @@ export class TokenHealthDialog extends HandlebarsApplicationMixin(ApplicationV2)
 				// Compute net effect (healing can't take the token above their max capacity)
 				let netEffect = Math.min(-dapplied, healingCapacity);
 				anouncePlayer = game.settings
-					.register("token-health", "ty")
+					.get("token-health", "ty")
 					.replace("$DS", damageSubtype)
 					.replace("$D", -dapplied)
 					.replace("$NE", netEffect);
