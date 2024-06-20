@@ -1,9 +1,9 @@
 {
 	"TOKEN_HEALTH.Amount": "Amount",
-	"TOKEN_HEALTH.Dialog_Heal_Title": "Heal $1",
-	"TOKEN_HEALTH.Dialog_Heal_Title_targeted": "Heal $1",
-	"TOKEN_HEALTH.Dialog_Damage_Title": "Deal damage to $1",
-	"TOKEN_HEALTH.Dialog_Damage_Title_targeted": "Deal damage to $1",
+	"TOKEN_HEALTH.Dialog_Heal_Title": "Heal {nameOfTokens}",
+	"TOKEN_HEALTH.Dialog_Heal_Title_targeted": "Heal {nameOfTokens}",
+	"TOKEN_HEALTH.Dialog_Damage_Title": "Deal damage to {nameOfTokens}",
+	"TOKEN_HEALTH.Dialog_Damage_Title_targeted": "Deal damage to {nameOfTokens}",
 	"TOKEN_HEALTH.Dialog_Help": "Enter the number of points to apply. Using negative numbers will cause damage to be healing and vice versa.",
 	"TOKEN_HEALTH.Dialog_Penetration_Help": "Setting Damage Type to 'Penetrating' will bypass damage mitigation (has no effect on healing).",
 	"TOKEN_HEALTH.Heal": "Apply as Healing",
