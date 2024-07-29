@@ -12,7 +12,7 @@
 		"access": "UI warning if unable to affect",
 		"accessHint": "Warning message to players if none of the selected/targeted tokens are owned by them",
 		"accessMsg": "Token Health: Access Denied!",
-		"toggleKeyName": "Display Health Token Dialog",
+		"toggleKeyName": "Display Token Health Dialog",
 		"toggleKeyHint": "Displays the dialog to adjust the selected tokens' attributes. If you hold ALT, it will display the targeted tokens instead.",
 		"damageTypeLabel": "Type",
 		"damageType1": "Primary Damage Type (optional)",
