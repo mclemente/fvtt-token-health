@@ -17,6 +17,7 @@ Hooks.once("i18nInit", async function () {
 
 			// Cull the array of targeted/selected tokens to only include those owned by the user
 			const allTokens = isTarget ? Array.from(game.user.targets) : canvas.tokens.controlled;
+			if (!allTokens.length) return;
 			const tokens = allTokens.filter((t) => t.isOwner);
 			if (tokens.some((t) => t.hasActiveHUD)) return;
 			context.event.preventDefault();
