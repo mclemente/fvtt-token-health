@@ -12,6 +12,7 @@ Hooks.once("i18nInit", async function () {
 			},
 		],
 		onDown: ({ event, isAlt: isTarget }) => {
+			if (canvas.tokens.hud.rendered) return;
 			// Cull the array of targeted/selected tokens to only include those owned by the user
 			const allTokens = isTarget ? Array.from(game.user.targets) : canvas.tokens.controlled;
 			if (!allTokens.length) return;
